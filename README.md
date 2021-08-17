@@ -2,7 +2,7 @@
 curso de platzi de javascript
 
 
-##Taller # 1 
+## Taller # 1 
 
 -Primer paso: definir las formulas
 
