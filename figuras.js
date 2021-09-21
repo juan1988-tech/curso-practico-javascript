@@ -1,32 +1,43 @@
 //Cuadrado
-console.group("Cuadrado");
-const ladoCuadrado = 5;
-console.log(`el lado del cuadrado es ${ladoCuadrado} cms`);
+console.group("Cuadrado")
+function perimetroCuadrado(lado){
+    return lado * 4;
+}
 
-const perimetroCuadrado = ladoCuadrado * 4;
-console.log(`el perimetro del cuadrado es ${perimetroCuadrado} cms`);
+console.log(`el perimetro del cuadrado es ${perimetroCuadrado(4)} cms`);
 
-const areaCuadrado = Math.pow(ladoCuadrado,2);
-console.log(`el area del cuadrado es ${areaCuadrado} cms`);
+const areaCuadrado = (lado) => {
+    return Math.pow(lado,2);
+}
+console.log(`el area de cuadrado es ${areaCuadrado(4)} cms`);
 console.groupEnd();
 
 //Triangulo
 console.group("Triangulo");
-const ladoTriangulo1 = 5,ladoTriangulo2 = 6, baseTriangulo = 4, alturaTriangulo = 4;
-console.log(`los lados del triangulo son ${ladoTriangulo1} y  ${ladoTriangulo2} cms, y la base es ${baseTriangulo} cms`);
-
-const perimetroTriangulo = ladoTriangulo1 + ladoTriangulo2 + baseTriangulo;
-console.log(`el perimetro del triangulos es ${perimetroTriangulo} cms`);
-
-const areaTriangulo =(alturaTriangulo * baseTriangulo) / 2;
-console.log(`el area del triangulo es ${areaTriangulo}`);
+function perimetroTriangulo(lado1, lado2, base){
+    return lado1 + lado2 + base;
+}  
+console.log(`el perimetro del triangulo es ${perimetroTriangulo(5,5,5)} cms`);
+const areaTriangulo = (base,altura) => {
+    return ( base * altura ) / 2;
+}
+console.log(`el area del triangulo es ${areaTriangulo(4,6)} cms`);
 console.groupEnd();
+
 
 //Círculo
-console.group("Circulo");
-const diametro = 4, pi =Math.PI;
-console.log(`el diametro del círculo es ${diametro}`);
+console.group("Círculo");
 
-let areaCirculo =  parseInt(pi  * Math.pow((diametro/2),2));
-console.log(`el area del círculo es ${areaCirculo}`);
+function perimetroCirculo(radio){
+    const pi = Math.PI;
+    const diametro = radio * 2;
+    return pi * diametro;
+}
+
+function areaCirculo(radio){
+    return Math.PI * Math.pow(radio,2)
+}
+console.log(`el perimetro del círculo es ${perimetroCirculo(2)}`);
+console.log(`el area del círculo se ${areaCirculo(1)}`)
 console.groupEnd();
+
