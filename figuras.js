@@ -6,14 +6,11 @@ function perimetroCuadrado(lado){
 
 console.log(`el perimetro del cuadrado es ${perimetroCuadrado(4)} cms`);
 
-const areaCuadrado = (lado) => {
+function areaCuadrado(lado)  {
     return Math.pow(lado,2);
 }
 console.log(`el area de cuadrado es ${areaCuadrado(4)} cms`);
 console.groupEnd();
-
-//const input = document.getElementById('inputCuadrado');
-//const value = input.value;
 
 const calculateSquarePerimeter = () =>{
     const input = document.getElementById('inputCuadrado');
@@ -22,11 +19,12 @@ const calculateSquarePerimeter = () =>{
     document.getElementById('result').innerHTML = `el valor del perimetro es ${perimetro}`;
 }
 
-const calculateAreaPerimeter = () =>{   
-    const area = areaCuadrado(value);
+const calculateSquareArea = () =>{   
+
     const input = document.getElementById('inputCuadrado');
     const value = input.value;
-    document.getElementById('resultArea').innerHTML = `el valor del area es ${area}`;
+    const area = areaCuadrado(value);
+    document.getElementById('result').innerHTML = `el valor del area es ${area}`;
 }
 
 
