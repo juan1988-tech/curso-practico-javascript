@@ -12,6 +12,24 @@ const areaCuadrado = (lado) => {
 console.log(`el area de cuadrado es ${areaCuadrado(4)} cms`);
 console.groupEnd();
 
+//const input = document.getElementById('inputCuadrado');
+//const value = input.value;
+
+const calculateSquarePerimeter = () =>{
+    const input = document.getElementById('inputCuadrado');
+    const value = input.value;  
+    const perimetro = perimetroCuadrado(value);
+    document.getElementById('result').innerHTML = `el valor del perimetro es ${perimetro}`;
+}
+
+const calculateAreaPerimeter = () =>{   
+    const area = areaCuadrado(value);
+    const input = document.getElementById('inputCuadrado');
+    const value = input.value;
+    document.getElementById('resultArea').innerHTML = `el valor del area es ${area}`;
+}
+
+
 //Triangulo
 console.group("Triangulo");
 function perimetroTriangulo(lado1, lado2, base){

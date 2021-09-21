@@ -22,7 +22,24 @@
     </style>
 </head>
 <body>
-    <h1>Curso básico de Javascript con platzi</h1>
+    <header>
+        <h1>Curso básico de Javascript con platzi</h1>
+    </header>
+    <main>
+        <section class="square">
+            <h2>Calcula el perimetro o el area del cuadrado</h2>
+            <form>
+                <label for="inputCuadrado">
+                    Escribe cuanto mide el lado de tu cuadrado
+                </label>
+                <input id="inputCuadrado" type="number"/>
+                <button type="button" onclick="calculateSquarePerimeter()">calcular perimetro cuadrado</button>
+                <button type="submit"> calcular area cuadrado</button>
+                <p id="result"></p>
+                <p id="reaultArea"></p>
+            </form>
+        </section>
+    </main>
     <script src="./figuras.js"></script>
 </body>
 </html>
